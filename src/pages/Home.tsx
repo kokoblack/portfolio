@@ -41,8 +41,8 @@ const Home = () => {
         <HomeContainer >
           <NavBar />
           <Hero />
-          <About />
           <TechStack />
+          <About />
           <Project />
           <Contact />
         </HomeContainer>
