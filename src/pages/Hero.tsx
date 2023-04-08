@@ -2,7 +2,7 @@ import React from 'react'
 
 const Hero = () => {
   return (
-    <div>Hero</div>
+    <div style={{height: "100vh"}}>Hero</div>
   )
 }
 
