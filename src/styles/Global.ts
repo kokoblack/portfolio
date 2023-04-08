@@ -27,3 +27,10 @@ export const MoveRight = styled.div`
 export const MoveLeft = styled.div`
   margin-right: auto;
 `;
+
+export const BgcolorWhite = styled.div`
+background-color: ${color.white};
+`
+export const BgcolorDark = styled.div`
+background-color: ${color.dark};
+`
