@@ -4,6 +4,8 @@ import { Flex } from "./Global";
 
 export const NavContainer = styled(Flex)<{ menu: boolean }>`
   width: 100%;
+  font-family: 'DM Sans';
+  font-weight: 500;
   padding: 0.3rem 4%;
   box-sizing: border-box;
   font-size: clamp(0.625rem, 2.5vw, 1.1rem);

@@ -91,7 +91,7 @@ const NavBar = () => {
               style={flex}
               initial={{ scale: 0.5, rotate: 180 }}
               animate={{ scale: 1, rotate: 0 }}
-              transition={{ duration: 0.7 }}
+              transition={{ duration: 0.5 }}
             >
               <HiOutlineMenuAlt3 />
             </motion.div>
@@ -113,7 +113,7 @@ const NavBar = () => {
                 {link.map((text) => (
                   <NavLink key={text.href} href={text.href}>
                     <motion.div
-                      style={{ marginBottom: "12%" }}
+                      style={{ marginBottom: "16%" }}
                       initial={{ x: -300, opacity: 0 }}
                       animate={{ x: 0, opacity: 1 }}
                       transition={{ duration: 0.5, delay: text.delay }}
