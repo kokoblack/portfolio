@@ -24,7 +24,7 @@ width: ${({basis}) => basis}%;
 
 export const HeroText = styled.p`
   font-weight: 700;
-  font-size: clamp(1.5rem, 4vw, 3.5rem);
+  font-size: clamp(1.8rem, 4vw, 3.5rem);
   color: ${({ theme }) => theme.secondary};
   text-align: left;
 
