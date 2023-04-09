@@ -27,7 +27,7 @@ export const NavLink = styled.a`
   font-weight: 500;
 
   @media screen and (max-width: 767px) {
-    /* margin-bottom: 1rem; */
+    margin-bottom: 6%;
   }
 `;
 
@@ -182,6 +182,6 @@ export const ToggleNavTheme = styled(NavTheme)`
 `;
 
 export const NavIconContainer = styled(Flex)`
-  margin-top: 20%;
+  margin-top: 25%;
   flex-direction: column;
 `;

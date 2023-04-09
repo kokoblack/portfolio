@@ -113,7 +113,6 @@ const NavBar = () => {
                 {link.map((text) => (
                   <NavLink key={text.href} href={text.href}>
                     <motion.div
-                      style={{ marginBottom: "16%" }}
                       initial={{ x: -300, opacity: 0 }}
                       animate={{ x: 0, opacity: 1 }}
                       transition={{ duration: 0.5, delay: text.delay }}

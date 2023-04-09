@@ -5,7 +5,10 @@ export const TSContainer = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding: 4%;
+  box-sizing: border-box;
   /* margin-top: 8%; */
+  width: 100%;
 `;
 
 export const TSHeader = styled.h3`
@@ -19,13 +22,12 @@ export const TSText = styled.p`
   color: ${({ theme }) => theme.primary};
   font-weight: 400;
   font-size: clamp(1.2rem, 4vw, 1.5rem);
-  margin: 0;
+  margin: 1% 0;
 `;
 
 export const TSIcon = styled.div<{ color: string, w?: number }>`
   color: ${({ color }) => color};
-  font-size: clamp(2rem, 5vw, 5rem);
-  width: ${({ w }) => w}%;
+  font-size: clamp(3rem, 5vw, 5rem);
 
   @media screen and (max-width: 992px) {
     /* font-size: 5vw; */
@@ -36,8 +38,10 @@ export const TSIconContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   width: 100%;
+  column-gap: 17%;
   row-gap: 6%;
   margin-top: 6%;
+  box-sizing: border-box;
 
   @media screen and (max-width: 992px) {
     grid-template-columns: repeat(4, 1fr);

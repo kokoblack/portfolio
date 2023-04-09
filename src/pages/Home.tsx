@@ -8,6 +8,9 @@ type theme = {
   secondary: string;
   standard: string;
   border: string;
+  card: string;
+  cardBG: string;
+  cardBS: string;
 };
 
 type context = {
@@ -24,13 +27,19 @@ const Home = () => {
     primary: "#666666",
     secondary: "#42446E",
     standard: "#ffffff",
-    border: "#e7ebf0"
+    border: "#e7ebf0",
+    card: "#000",
+    cardBG: "#fff",
+    cardBS: 'rgba(0, 0, 0, 0.2)'
   };
   const darkTheme = {
     primary: "#A7A7A7",
     secondary: "#CCCCCC",
     standard: "#191919",
-    border: "#212020"
+    border: "#212020",
+    card: "#fff",
+    cardBG: "#363636",
+    cardBS: 'rgba(0, 0, 0, 0)'
   };
 
   const [theme, setTheme] = useState(lightTheme);
@@ -42,8 +51,8 @@ const Home = () => {
           <NavBar />
           <Hero />
           <TechStack />
-          <About />
           <Project />
+          <About />
           <Contact />
         </HomeContainer>
       </ThemeProvider>
