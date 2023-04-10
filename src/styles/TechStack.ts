@@ -14,14 +14,14 @@ export const TSContainer = styled.div`
 export const TSHeader = styled.h3`
   color: ${({ theme }) => theme.secondary};
   font-weight: 700;
-  font-size: clamp(1.8rem, 4vw, 2.3rem);
+  font-size: clamp(1.5rem, 4vw, 2.3rem);
   margin: 0;
 `;
 
 export const TSText = styled.p`
   color: ${({ theme }) => theme.primary};
   font-weight: 400;
-  font-size: clamp(1.2rem, 4vw, 1.5rem);
+  font-size: clamp(1.1rem, 4vw, 1.5rem);
   margin: 1% 0;
 `;
 

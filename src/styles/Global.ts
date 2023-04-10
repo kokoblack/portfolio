@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const color = {
   lightPrimary: "#666666",
@@ -13,11 +13,13 @@ export const Flex = styled.div<{
   item?: string;
   gap?: string;
   content?: string;
+  w?: boolean
 }>`
   display: flex;
   align-items: ${({ item }) => (item ? item : "center")};
   justify-content: ${({ content }) => (content ? content : "center")};
   column-gap: ${({ gap }) => (gap ? gap : "2")}%;
+  ${({w}) => w && css`width: 100%`}
 `;
 
 export const MoveRight = styled.div`

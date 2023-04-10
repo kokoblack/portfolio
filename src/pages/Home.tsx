@@ -4,6 +4,7 @@ import { HomeContainer } from "../styles/Home";
 import { About, Contact, Hero, NavBar, Project, TechStack } from "./index";
 
 type theme = {
+  primaryReverse: string
   primary: string;
   secondary: string;
   standard: string;
@@ -24,6 +25,7 @@ export const ThemeContext = createContext({} as context);
 
 const Home = () => {
   const lightTheme = {
+    primaryReverse: "#A7A7A7",
     primary: "#666666",
     secondary: "#42446E",
     standard: "#ffffff",
@@ -33,6 +35,7 @@ const Home = () => {
     cardBS: 'rgba(0, 0, 0, 0.2)'
   };
   const darkTheme = {
+    primaryReverse: "#666666",
     primary: "#A7A7A7",
     secondary: "#CCCCCC",
     standard: "#191919",

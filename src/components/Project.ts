@@ -11,6 +11,7 @@ export const project = [
     stack: "React, Tailwind, JavaScript",
     demo: "https://winamp-nu.vercel.app/",
     code: "https://github.com/kokoblack/winamp",
+    delay: 0.1
   },
   {
     image: todo,
@@ -19,6 +20,7 @@ export const project = [
     stack: "React, Next, TypeScript, Chakra UI",
     demo: "https://todo-nine-lyart.vercel.app/",
     code: "https://github.com/kokoblack/todo",
+    delay: 0.2
   },
   {
     image: jupit,
@@ -27,6 +29,7 @@ export const project = [
     stack: "React, JavaScript, Styled Component",
     demo: "https://jupit-nfirf.vercel.app/",
     code: "https://github.com/kokoblack/jupit",
+    delay: 0.3
   },
   {
     image: gpt3,
@@ -35,5 +38,6 @@ export const project = [
     stack: "React, JavaScript",
     demo: "https://gpt3-khaki.vercel.app/",
     code: "https://github.com/kokoblack/gpt3",
+    delay: 0.4
   },
 ];
