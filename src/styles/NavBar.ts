@@ -31,31 +31,6 @@ export const NavLink = styled.a`
   }
 `;
 
-export const NavLogo = styled.div`
-  box-sizing: border-box;
-  font-size: 0.5rem;
-  padding: 0.2rem 0.4rem;
-  border: 2px solid;
-  border-image-slice: 1;
-  border-image-source: linear-gradient(90deg, #13b0f5 -2.06%, #e70faa 100%);
-  margin-right: auto;
-  background: -webkit-linear-gradient(90deg, #13b0f5 -2.06%, #e70faa 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-
-  @media screen and (max-width: 479px) {
-  }
-`;
-
-export const NavLogoText = styled.p<{ base?: any }>`
-  font-size: ${({ base }) => (base ? base : "1.2")}rem;
-  margin: 0;
-
-  @media screen and (max-width: 479px) {
-    font-size: ${({ base }) => (base ? base - 0.1 : "1")}rem;
-  }
-`;
-
 export const NavIcon = styled(Flex)`
   font-size: 1rem;
   cursor: pointer;
@@ -173,7 +148,7 @@ export const ToggleNavTheme = styled(NavTheme)`
 
   @media screen and (max-width: 767px) {
     display: flex;
-    margin-top: 20%;
+    margin-top: 50%;
   }
 
   @media screen and (max-width: 479px) {

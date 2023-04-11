@@ -3,7 +3,6 @@ import {
   NavIcon,
   NavIconContainer,
   NavIconFlex,
-  NavLogo,
   NavLink,
   NavLinkFlex,
   NavMenu,
@@ -11,17 +10,16 @@ import {
   ToggleMenu,
   ToggleNavIcon,
   ToggleNavTheme,
-  NavLogoText,
   Div,
 } from "../styles/NavBar";
 import { BsLinkedin, BsTwitter, BsGithub } from "react-icons/bs";
 import { HiOutlineMenuAlt3, HiOutlineSun, HiOutlineMoon } from "react-icons/hi";
 import { MdClose } from "react-icons/md";
 import { useContext, useState } from "react";
-import { Flex } from "../styles/Global";
+import { Flex, MoveLeft, MoveRight } from "../styles/Global";
 import { ThemeContext } from "./Home";
 import { motion, AnimatePresence } from "framer-motion";
-import { duration } from "@mui/material";
+import Logo from "../components/Logo";
 
 const NavBar = () => {
   const link: { link: string; href: string; delay: number }[] = [
@@ -48,10 +46,9 @@ const NavBar = () => {
   return (
     // <ThemeProvider theme={theme}>
     <NavContainer menu={menu}>
-      <NavLogo>
-        <NavLogoText>K</NavLogoText>
-        <NavLogoText base=".6">Kareem</NavLogoText>
-      </NavLogo>
+      <MoveLeft>
+        <Logo gradient={true} />
+      </MoveLeft>
 
       {link.map((text) => (
         <NavLinkFlex key={text.href}>
@@ -99,7 +96,7 @@ const NavBar = () => {
         </AnimatePresence>
       </NavMenu>
 
-      <ToggleMenu >
+      <ToggleMenu>
         <AnimatePresence>
           {menu && (
             <motion.div
