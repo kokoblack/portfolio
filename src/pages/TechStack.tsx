@@ -22,12 +22,13 @@ const TechStack = () => {
         <TSIconContainer>
           {icons.map((icon, id) => (
             <motion.div
+              key={id}
               initial={{ y: 50, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.5, delay: icon.delay }}
               viewport={{ once: true }}
             >
-              <TSIcon key={id} color={icon.color}>
+              <TSIcon color={icon.color}>
                 <motion.div
                   whileHover={{
                     scale: 1.2,

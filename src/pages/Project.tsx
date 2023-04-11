@@ -34,12 +34,13 @@ const Project = () => {
         <ProjectCardContainer>
           {project.map((pro) => (
             <motion.div
+              key={pro.name}
               initial={{ y: 100, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 1, delay: pro.delay }}
               viewport={{ once: true }}
             >
-              <ProjectCard key={pro.name}>
+              <ProjectCard>
                 <ProjectCardImg src={pro.image} />
 
                 <ProjectCardHolder>
