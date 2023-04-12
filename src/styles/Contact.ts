@@ -42,7 +42,7 @@ export const ContactText = styled(ProjectCardDesc)`
     /* margin-bottom: 4%; */
   }
 `;
-export const ContactIcon = styled.div`
+export const ContactIcon = styled.a`
   display: flex;
   justify-content: center;
   align-items: center;

@@ -14,7 +14,14 @@ import { BsLinkedin, BsTwitter, BsGithub } from "react-icons/bs";
 import { motion } from "framer-motion";
 
 const Contact = () => {
-  const icons = [<BsGithub />, <BsLinkedin />, <BsTwitter />];
+  const icons = [
+    { icon: <BsGithub />, link: "https://github.com/kokoblack" },
+    {
+      icon: <BsLinkedin />,
+      link: "https://www.linkedin.com/in/haruna-abdul-kareem-0860901b5/",
+    },
+    { icon: <BsTwitter />, link: "https://twitter.com/Kokoblack_tweet" },
+  ];
 
   return (
     <ContactContainer>
@@ -38,8 +45,8 @@ const Contact = () => {
           <ContactText>benzimakareem26@gmail.com</ContactText>
 
           <Flex>
-            {icons.map((icons, ind) => (
-              <ContactIcon key={ind}>{icons}</ContactIcon>
+            {icons.map((icons) => (
+              <ContactIcon href={icons.link} target="_blank" key={icons.link}>{icons.icon}</ContactIcon>
             ))}
           </Flex>
         </ContactFLex>

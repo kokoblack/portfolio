@@ -54,13 +54,21 @@ export const NavIconFlex = styled(Flex)`
   margin-left: auto;
 `;
 
-export const NavTheme = styled(Flex)`
+export const NavTheme = styled(Flex)<{auto?: boolean}>`
   padding: 0.4rem 0.5rem;
   border-radius: 8px;
   border: 1px solid ${({ theme }) => theme.border};
   font-size: 1rem;
   cursor: pointer;
   color: ${({ theme }) => theme.primary};
+
+  ${({auto}) => {
+    if (auto) {
+      return css`
+      margin-left: auto;
+      `
+    }
+  }}
 
   /* &:hover {
     background-color: #ebe8e8;
@@ -148,7 +156,7 @@ export const ToggleNavTheme = styled(NavTheme)`
 
   @media screen and (max-width: 767px) {
     display: flex;
-    margin-top: 50%;
+    margin-top: 1rem;
   }
 
   @media screen and (max-width: 479px) {
@@ -157,6 +165,6 @@ export const ToggleNavTheme = styled(NavTheme)`
 `;
 
 export const NavIconContainer = styled(Flex)`
-  margin-top: 25%;
+  margin-top: 15%;
   flex-direction: column;
 `;
