@@ -24,7 +24,7 @@ const Contact = () => {
   ];
 
   return (
-    <ContactContainer>
+    <ContactContainer id="Contacts">
       <motion.div
         initial={{ y: 100, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}

@@ -16,13 +16,12 @@ const Hero = () => {
   console.log(s);
   return (
     <motion.div
-      
       initial={{ y: 100, opacity: 0 }}
       whileInView={{ y: 0, opacity: 1 }}
       transition={{ duration: 2 }}
       viewport={{ once: true }}
     >
-      <HeroContainer onScroll={(e) => ss(e.currentTarget.scrollTop)}>
+      <HeroContainer id="Home" onScroll={(e) => console.log(e)}>
         <HeroBasis basis={60}>
           <HeroText>
             Hi &#128075;, <HeroBR />

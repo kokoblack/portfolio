@@ -4,27 +4,51 @@ import { Flex } from "./Global";
 
 export const NavContainer = styled(Flex)<{ menu: boolean }>`
   width: 100%;
-  font-family: 'DM Sans';
+  font-family: "DM Sans";
   font-weight: 500;
   padding: 0.3rem 4%;
   box-sizing: border-box;
   font-size: clamp(0.625rem, 2.5vw, 1.1rem);
   position: sticky;
   top: 0;
-  ${({ menu }) => {
+  /* backdrop-filter: blur(8px); */
+  box-shadow: inset 0px -1px 1px ${({ theme }) => theme.border};
+  z-index: 50;
+
+  @media screen and (min-width: 480px){
+    backdrop-filter: blur(8px);
+  }
+
+  @media screen and (max-width: 479px){
+    ${({ menu }) => {
     if (!menu) {
       return css`
         backdrop-filter: blur(8px);
       `;
     }
   }}
-  box-shadow: inset 0px -1px 1px ${({ theme }) => theme.border};
+  }
 `;
 
-export const NavLink = styled.a`
+export const NavLink = styled.a<{ active: number; check: number }>`
   text-decoration: none;
-  color: ${({ theme }) => theme.primary};
-  font-weight: 500;
+  ${({ active, check }) => {
+    if (active === check) {
+      return css`
+        color: ${({ theme }) => theme.secondary};
+        font-weight: 700;
+      `;
+    }
+  }}
+  ${({ active, check }) => {
+    if (active !== check) {
+      return css`
+        color: ${({ theme }) => theme.primary};
+        font-weight: 500;
+      `;
+    }
+  }}
+  
 
   @media screen and (max-width: 767px) {
     margin-bottom: 6%;
@@ -54,7 +78,7 @@ export const NavIconFlex = styled(Flex)`
   margin-left: auto;
 `;
 
-export const NavTheme = styled(Flex)<{auto?: boolean}>`
+export const NavTheme = styled(Flex)<{ auto?: boolean }>`
   padding: 0.4rem 0.5rem;
   border-radius: 8px;
   border: 1px solid ${({ theme }) => theme.border};
@@ -62,11 +86,11 @@ export const NavTheme = styled(Flex)<{auto?: boolean}>`
   cursor: pointer;
   color: ${({ theme }) => theme.primary};
 
-  ${({auto}) => {
+  ${({ auto }) => {
     if (auto) {
       return css`
-      margin-left: auto;
-      `
+        margin-left: auto;
+      `;
     }
   }}
 
@@ -130,6 +154,7 @@ export const Div = styled.div<{ menu: boolean }>`
     padding-top: 25%;
     border-radius: none;
     background-color: transparent;
+    
     ${({ menu }) => {
       if (menu) {
         return css`
@@ -139,7 +164,6 @@ export const Div = styled.div<{ menu: boolean }>`
     }}
   }
 `;
-
 
 export const ToggleNavIcon = styled(NavIcon)`
   display: none;
