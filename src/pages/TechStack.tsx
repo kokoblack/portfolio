@@ -16,7 +16,7 @@ const TechStack = () => {
       transition={{ duration: 1 }}
       viewport={{ once: true }}
     >
-      <TSContainer>
+      <TSContainer id="TechStack">
         <TSHeader>My Tech Stack</TSHeader>
         <TSText> Technologies I’ve been working with recently</TSText>
         <TSIconContainer>

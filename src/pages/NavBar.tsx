@@ -24,10 +24,10 @@ import Logo from "../components/Logo";
 const NavBar = () => {
   const link: { link: string; href: string; delay: number }[] = [
     { link: "Home", href: "#Home", delay: 0.1 },
-    { link: "About", href: "#About", delay: 0.2 },
     { link: "Tech Stack", href: "#TechStack", delay: 0.3 },
     { link: "Projects", href: "#Projects", delay: 0.4 },
-    { link: "Contacts", href: "#home", delay: 0.5 },
+    { link: "About", href: "#About", delay: 0.2 },
+    { link: "Contacts", href: "#Contacts", delay: 0.5 },
   ];
   const icons = [<BsGithub />, <BsLinkedin />, <BsTwitter />];
 
@@ -42,6 +42,7 @@ const NavBar = () => {
 
   const [menu, toggleMenu] = useState(false);
   const [light, toggleLight] = useState(true);
+  const [active, setActive] = useState(0);
 
   const onButtonClick = () => {
     fetch("Resume.pdf").then((response) => {
@@ -54,28 +55,32 @@ const NavBar = () => {
         alink.click();
       });
     });
+
+    toggleMenu(false)
   };
 
   return (
-    // <ThemeProvider theme={theme}>
     <NavContainer menu={menu}>
       <MoveLeft>
         <Logo gradient={true} />
       </MoveLeft>
 
-      {link.map((text) => (
+      {link.map((text, id) => (
         <NavLinkFlex key={text.href}>
-          <NavLink href={text.href}>{text.link}</NavLink>
+          <NavLink
+            onClick={() => setActive(id)}
+            active={active}
+            check={id}
+            href={text.href}
+          >
+            {text.link}
+          </NavLink>
         </NavLinkFlex>
       ))}
 
-      {/* <NavIconFlex>
-        {icons.map((icons, ind) => (
-          <NavIcon key={ind}>{icons}</NavIcon>
-        ))}
-      </NavIconFlex> */}
-
-      <NavTheme auto onClick={onButtonClick}>Download CV</NavTheme>
+      <NavTheme auto onClick={onButtonClick}>
+        Download CV
+      </NavTheme>
 
       <NavTheme onClick={() => toggleLight((prev) => !prev)}>
         {light ? (
@@ -122,8 +127,17 @@ const NavBar = () => {
               transition={{ duration: 0.7 }}
             >
               <Div menu={menu}>
-                {link.map((text) => (
-                  <NavLink key={text.href} href={text.href}>
+                {link.map((text, id) => (
+                  <NavLink
+                    onClick={() => {
+                      setActive(id);
+                      toggleMenu(false);
+                    }}
+                    active={active}
+                    check={id}
+                    key={text.href}
+                    href={text.href}
+                  >
                     <motion.div
                       initial={{ x: -300, opacity: 0 }}
                       animate={{ x: 0, opacity: 1 }}
@@ -140,7 +154,9 @@ const NavBar = () => {
                     animate={{ x: 0, opacity: 1 }}
                     transition={{ duration: 0.5, delay: 0.6 }}
                   >
-                    <ToggleNavTheme onClick={onButtonClick}>Download CV</ToggleNavTheme>
+                    <ToggleNavTheme onClick={onButtonClick}>
+                      Download CV
+                    </ToggleNavTheme>
                   </motion.div>
 
                   <motion.div
@@ -152,9 +168,19 @@ const NavBar = () => {
                       onClick={() => toggleLight((prev) => !prev)}
                     >
                       {light ? (
-                        <HiOutlineMoon onClick={() => setTheme(darkTheme)} />
+                        <HiOutlineMoon
+                          onClick={() => {
+                            setTheme(darkTheme);
+                            toggleMenu(false);
+                          }}
+                        />
                       ) : (
-                        <HiOutlineSun onClick={() => setTheme(lightTheme)} />
+                        <HiOutlineSun
+                          onClick={() => {
+                            setTheme(lightTheme);
+                            toggleMenu(false);
+                          }}
+                        />
                       )}
                     </ToggleNavTheme>
                   </motion.div>

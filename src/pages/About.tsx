@@ -17,7 +17,7 @@ import { motion } from "framer-motion";
 
 const About = () => {
   return (
-    <AboutContainer>
+    <AboutContainer id="About">
       <section>
         <motion.div
           initial={{ y: 100, opacity: 0 }}
