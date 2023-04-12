@@ -38,10 +38,23 @@ const NavBar = () => {
   };
 
   const navContext = useContext(ThemeContext);
-  const { theme, setTheme, darkTheme, lightTheme } = navContext;
+  const { setTheme, darkTheme, lightTheme } = navContext;
 
   const [menu, toggleMenu] = useState(false);
   const [light, toggleLight] = useState(true);
+
+  const onButtonClick = () => {
+    fetch("Resume.pdf").then((response) => {
+      response.blob().then((blob) => {
+        const fileURL = window.URL.createObjectURL(blob);
+
+        let alink = document.createElement("a");
+        alink.href = fileURL;
+        alink.download = "Resume.pdf";
+        alink.click();
+      });
+    });
+  };
 
   return (
     // <ThemeProvider theme={theme}>
@@ -56,11 +69,13 @@ const NavBar = () => {
         </NavLinkFlex>
       ))}
 
-      <NavIconFlex>
+      {/* <NavIconFlex>
         {icons.map((icons, ind) => (
           <NavIcon key={ind}>{icons}</NavIcon>
         ))}
-      </NavIconFlex>
+      </NavIconFlex> */}
+
+      <NavTheme auto onClick={onButtonClick}>Download CV</NavTheme>
 
       <NavTheme onClick={() => toggleLight((prev) => !prev)}>
         {light ? (
@@ -125,11 +140,7 @@ const NavBar = () => {
                     animate={{ x: 0, opacity: 1 }}
                     transition={{ duration: 0.5, delay: 0.6 }}
                   >
-                    <Flex gap="30">
-                      {icons.map((icons, ind) => (
-                        <ToggleNavIcon key={ind}>{icons}</ToggleNavIcon>
-                      ))}
-                    </Flex>
+                    <ToggleNavTheme onClick={onButtonClick}>Download CV</ToggleNavTheme>
                   </motion.div>
 
                   <motion.div

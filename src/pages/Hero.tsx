@@ -9,23 +9,27 @@ import {
 import profile from "../assets/prof.jpg";
 import Typewriter from "typewriter-effect";
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 const Hero = () => {
+  const [s, ss] = useState(0);
+  console.log(s);
   return (
     <motion.div
+      
       initial={{ y: 100, opacity: 0 }}
       whileInView={{ y: 0, opacity: 1 }}
       transition={{ duration: 2 }}
       viewport={{ once: true }}
     >
-      <HeroContainer>
+      <HeroContainer onScroll={(e) => ss(e.currentTarget.scrollTop)}>
         <HeroBasis basis={60}>
           <HeroText>
             Hi &#128075;, <HeroBR />
             My name is <br />
             <HeroTextSpan>
               <Typewriter
-                options={{ loop: true, }}
+                options={{ loop: true }}
                 onInit={(typewriter) => {
                   typewriter
                     .typeString("Haruna Kareem.")
