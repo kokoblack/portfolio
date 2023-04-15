@@ -9,11 +9,13 @@ import {
 import profile from "../assets/prof.jpg";
 import Typewriter from "typewriter-effect";
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useRef } from "react";
+import { updateActive } from "../components/updateActive";
 
 const Hero = () => {
-  const [s, ss] = useState(0);
-  console.log(s);
+  const myRef = useRef<HTMLDivElement>(null!);
+  updateActive(0, myRef);
+
   return (
     <motion.div
       initial={{ y: 100, opacity: 0 }}
@@ -21,7 +23,7 @@ const Hero = () => {
       transition={{ duration: 2 }}
       viewport={{ once: true }}
     >
-      <HeroContainer id="Home" onScroll={(e) => console.log(e)}>
+      <HeroContainer id="Home" ref={myRef}>
         <HeroBasis basis={60}>
           <HeroText>
             Hi &#128075;, <HeroBR />

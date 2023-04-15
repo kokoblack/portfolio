@@ -7,8 +7,13 @@ import {
 } from "../styles/TechStack";
 import { motion } from "framer-motion";
 import { icons } from "../components/Icons";
+import { updateActive } from "../components/updateActive";
+import { useRef } from "react";
 
 const TechStack = () => {
+  const myRef = useRef<HTMLDivElement>(null!);
+  updateActive(1, myRef);
+
   return (
     <motion.div
       initial={{ y: 200, opacity: 0 }}
@@ -16,7 +21,7 @@ const TechStack = () => {
       transition={{ duration: 1 }}
       viewport={{ once: true }}
     >
-      <TSContainer id="TechStack">
+      <TSContainer id="TechStack" ref={myRef}>
         <TSHeader>My Tech Stack</TSHeader>
         <TSText> Technologies I’ve been working with recently</TSText>
         <TSIconContainer>

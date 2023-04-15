@@ -6,12 +6,11 @@ export const NavContainer = styled(Flex)<{ menu: boolean }>`
   width: 100%;
   font-family: "DM Sans";
   font-weight: 500;
-  padding: 0.3rem 4%;
+  padding: 0.5rem 4%;
   box-sizing: border-box;
   font-size: clamp(0.625rem, 2.5vw, 1.1rem);
   position: sticky;
   top: 0;
-  /* backdrop-filter: blur(8px); */
   box-shadow: inset 0px -1px 1px ${({ theme }) => theme.border};
   z-index: 50;
 
