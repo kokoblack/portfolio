@@ -4,7 +4,7 @@ import { HomeContainer } from "../styles/Home";
 import { About, Contact, Hero, NavBar, Project, TechStack } from "./index";
 
 type theme = {
-  primaryReverse: string
+  primaryReverse: string;
   primary: string;
   secondary: string;
   standard: string;
@@ -18,6 +18,8 @@ type context = {
   theme: theme;
   lightTheme: theme;
   darkTheme: theme;
+  active: number;
+  setActive: React.Dispatch<React.SetStateAction<number>>;
   setTheme: React.Dispatch<React.SetStateAction<theme>>;
 };
 
@@ -32,7 +34,7 @@ const Home = () => {
     border: "#e7ebf0",
     card: "#000",
     cardBG: "#fff",
-    cardBS: 'rgba(0, 0, 0, 0.2)'
+    cardBS: "rgba(0, 0, 0, 0.2)",
   };
   const darkTheme = {
     primaryReverse: "#666666",
@@ -42,22 +44,23 @@ const Home = () => {
     border: "#212020",
     card: "#fff",
     cardBG: "#363636",
-    cardBS: 'rgba(0, 0, 0, 0)'
+    cardBS: "rgba(0, 0, 0, 0)",
   };
 
   const [theme, setTheme] = useState(lightTheme);
+  const [active, setActive] = useState(0);
 
   return (
-    <ThemeContext.Provider value={{ theme, lightTheme, darkTheme, setTheme }}>
+    <ThemeContext.Provider value={{ theme, active, lightTheme, darkTheme, setTheme, setActive }}>
       <ThemeProvider theme={theme}>
-        <HomeContainer >
-          <NavBar />
-          <Hero />
-          <TechStack />
-          <Project />
-          <About />
-          <Contact />
-        </HomeContainer>
+          <HomeContainer>
+            <NavBar />
+            <Hero />
+            <TechStack />
+            <Project />
+            <About />
+            <Contact />
+          </HomeContainer>
       </ThemeProvider>
     </ThemeContext.Provider>
   );

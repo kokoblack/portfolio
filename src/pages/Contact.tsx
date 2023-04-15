@@ -12,6 +12,8 @@ import {
 import { Flex } from "../styles/Global";
 import { BsLinkedin, BsTwitter, BsGithub } from "react-icons/bs";
 import { motion } from "framer-motion";
+import { useRef } from "react";
+import { updateActive } from "../components/updateActive";
 
 const Contact = () => {
   const icons = [
@@ -23,8 +25,11 @@ const Contact = () => {
     { icon: <BsTwitter />, link: "https://twitter.com/Kokoblack_tweet" },
   ];
 
+  const myRef = useRef<HTMLDivElement>(null!);
+  updateActive(4, myRef);
+
   return (
-    <ContactContainer id="Contacts">
+    <ContactContainer id="Contacts" ref={myRef}>
       <motion.div
         initial={{ y: 100, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
@@ -46,7 +51,9 @@ const Contact = () => {
 
           <Flex>
             {icons.map((icons) => (
-              <ContactIcon href={icons.link} target="_blank" key={icons.link}>{icons.icon}</ContactIcon>
+              <ContactIcon href={icons.link} target="_blank" key={icons.link}>
+                {icons.icon}
+              </ContactIcon>
             ))}
           </Flex>
         </ContactFLex>

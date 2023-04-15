@@ -1,4 +1,3 @@
-import img from "../assets/rect.png";
 import { BsLink45Deg } from "react-icons/bs";
 import { SiGithub } from "react-icons/si";
 import {
@@ -18,10 +17,15 @@ import {
 } from "../styles/Project";
 import { project } from "../components/Project";
 import { motion } from "framer-motion";
+import { updateActive } from "../components/updateActive";
+import { useRef } from "react";
 
 const Project = () => {
+  const myRef = useRef<HTMLDivElement>(null!);
+  updateActive(2, myRef);
+
   return (
-    <ProjectContainer id="Projects">
+    <ProjectContainer id="Projects" ref={myRef}>
       <motion.div
         initial={{ y: 200, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}

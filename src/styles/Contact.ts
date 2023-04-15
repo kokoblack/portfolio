@@ -10,7 +10,7 @@ export const ContactContainer = styled.div`
   color: ${({ theme }) => theme.secondary};
 `;
 export const ContactMailContainer = styled.div`
-  padding: 10% 0;
+  padding: 14% 0;
 `;
 export const ContactFLex = styled.div`
   display: flex;
@@ -18,7 +18,7 @@ export const ContactFLex = styled.div`
   align-items: center;
   width: 100%;
   box-sizing: border-box;
-  padding: 1% 0;
+  padding: 2% 0;
 
   @media screen and (max-width: 479px) {
     flex-direction: column;

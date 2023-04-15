@@ -16,7 +16,7 @@ import { BsLinkedin, BsTwitter, BsGithub } from "react-icons/bs";
 import { HiOutlineMenuAlt3, HiOutlineSun, HiOutlineMoon } from "react-icons/hi";
 import { MdClose } from "react-icons/md";
 import { useContext, useState } from "react";
-import { Flex, MoveLeft, MoveRight } from "../styles/Global";
+import { MoveLeft } from "../styles/Global";
 import { ThemeContext } from "./Home";
 import { motion, AnimatePresence } from "framer-motion";
 import Logo from "../components/Logo";
@@ -29,7 +29,6 @@ const NavBar = () => {
     { link: "About", href: "#About", delay: 0.2 },
     { link: "Contacts", href: "#Contacts", delay: 0.5 },
   ];
-  const icons = [<BsGithub />, <BsLinkedin />, <BsTwitter />];
 
   const flex = {
     display: "flex",
@@ -42,7 +41,9 @@ const NavBar = () => {
 
   const [menu, toggleMenu] = useState(false);
   const [light, toggleLight] = useState(true);
-  const [active, setActive] = useState(0);
+  const setActive = navContext.setActive;
+  const active = navContext.active;
+  
 
   const onButtonClick = () => {
     fetch("Resume.pdf").then((response) => {
@@ -56,7 +57,7 @@ const NavBar = () => {
       });
     });
 
-    toggleMenu(false)
+    toggleMenu(false);
   };
 
   return (

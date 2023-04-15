@@ -14,10 +14,15 @@ import {
 } from "../styles/About";
 import { Flex } from "../styles/Global";
 import { motion } from "framer-motion";
+import { useRef } from "react";
+import { updateActive } from "../components/updateActive";
 
 const About = () => {
+  const myRef = useRef<HTMLDivElement>(null!);
+  updateActive(3, myRef);
+
   return (
-    <AboutContainer id="About">
+    <AboutContainer id="About" ref={myRef}>
       <section>
         <motion.div
           initial={{ y: 100, opacity: 0 }}
