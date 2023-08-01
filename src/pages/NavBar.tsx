@@ -46,13 +46,13 @@ const NavBar = () => {
   
 
   const onButtonClick = () => {
-    fetch("Resume.pdf").then((response) => {
+    fetch("Kareem.pdf").then((response) => {
       response.blob().then((blob) => {
         const fileURL = window.URL.createObjectURL(blob);
 
         let alink = document.createElement("a");
         alink.href = fileURL;
-        alink.download = "Resume.pdf";
+        alink.download = "Kareem.pdf";
         alink.click();
       });
     });

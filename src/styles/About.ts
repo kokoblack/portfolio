@@ -7,7 +7,7 @@ export const AboutContainer = styled.div`
   box-sizing: border-box;
   padding: 0 4%;
   width: 70%;
-  margin-top: 12%;
+  margin-top: 10rem;
   text-align: left;
 
   @media screen and (max-width: 992px) {
@@ -15,12 +15,13 @@ export const AboutContainer = styled.div`
   }
 
   @media screen and (max-width: 599px) {
-    margin-top: 50%;
+    margin-top: 10rem;
   }
 
-  @media screen and (max-width: 479px) {
-    margin-top: 70%;
+  @media screen and (max-width: 480px) {
+    margin-top: 15rem;
   }
+
 `;
 
 export const AboutHeader = styled(TSHeader)`

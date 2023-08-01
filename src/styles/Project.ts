@@ -7,11 +7,7 @@ export const ProjectContainer = styled.div`
   box-sizing: border-box;
   padding: 0 4%;
   width: 100%;
-  margin-top: 12%;
-
-  @media screen and (max-width: 479px) {
-    margin-top: 40%;
-  }
+  box-sizing: border-box;
 `;
 export const ProjectHeader = styled(TSHeader)``;
 export const ProjectText = styled(TSText)``;

@@ -8,7 +8,7 @@ export const HeroContainer = styled.div`
   padding: 0 4%;
   box-sizing: border-box;
   /* margin-top: 8%; */
-  height: 100vh;
+  height: 100dvh;
 
   @media screen and (max-width: 992px) {
     flex-direction: column;
@@ -41,7 +41,7 @@ export const HeroTextSpan = styled.div`
 `;
 
 export const HeroImg = styled.img`
-  width: 60%;
+  width: 70%;
   display: block;
   margin-left: auto;
   border-radius: 100%;
@@ -54,7 +54,7 @@ export const HeroImg = styled.img`
   }
 
   @media screen and (max-width: 479px) {
-    width: 45%;
+    width: 70%;
   }
 `;
 export const HeroBR = styled.br`

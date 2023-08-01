@@ -20,9 +20,9 @@ const Contact = () => {
     { icon: <BsGithub />, link: "https://github.com/kokoblack" },
     {
       icon: <BsLinkedin />,
-      link: "https://www.linkedin.com/in/haruna-abdul-kareem-0860901b5/",
+      link: "https://www.linkedin.com/in/kokoblack/",
     },
-    { icon: <BsTwitter />, link: "https://twitter.com/Kokoblack_tweet" },
+    { icon: <BsTwitter />, link: "https://twitter.com/Kareem_d3v" },
   ];
 
   const myRef = useRef<HTMLDivElement>(null!);

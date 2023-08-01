@@ -1,6 +1,6 @@
 import winamp from '../assets/winamp.png'
 import gpt3 from '../assets/gpt3.png'
-import jupit from '../assets/jupit.png'
+import chatty from '../assets/chatty.png'
 import todo from '../assets/todo.png'
 
 export const project = [
@@ -17,18 +17,18 @@ export const project = [
     image: todo,
     desc: "Task App is created with Next, Typescript and chakra ui to add task and track your task. It allows you have differrent categories of tasks. for example, home and work task and you can have nexted task init",
     name: "Task App",
-    stack: "React, Next, TypeScript, Chakra UI",
+    stack: "Next, TypeScript, Chakra UI",
     demo: "https://todo-nine-lyart.vercel.app/",
     code: "https://github.com/kokoblack/todo",
     delay: 0.2
   },
   {
-    image: jupit,
-    desc: "Jupit is a landing page created with React and styled component with CoinGecko API. The Api is used to get crypto coins current price.",
-    name: "Jupit",
-    stack: "React, JavaScript, Styled Component",
-    demo: "https://jupit-nfirf.vercel.app/",
-    code: "https://github.com/kokoblack/jupit",
+    image: chatty,
+    desc: "Chatty is a fullstack messaging app to chat with friend and also chat with a friendly AI. It allows the option of private and group chat message.",
+    name: "Chatty",
+    stack: "Vuejs, TypeScript, Scss, nodejs, express, mongoose, socketio",
+    demo: "https://chatty-henna-nine.vercel.app/",
+    code: "https://github.com/kokoblack/chatty",
     delay: 0.3
   },
   {
