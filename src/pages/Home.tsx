@@ -56,8 +56,8 @@ const Home = () => {
           <HomeContainer>
             <NavBar />
             <Hero />
-            <TechStack />
             <Project />
+            <TechStack />
             <About />
             <Contact />
           </HomeContainer>

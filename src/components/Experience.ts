@@ -1,26 +1,32 @@
 export const experience = [
   {
-    role: "Frontend Developer",
-    type: "Intern",
-    company: "HNG I8 (Zuri)",
-    date: "Aug 2019 - Dec 2019",
+    role: "Frontend Engineer",
+    type: "Full Time",
+    company: "Groupify",
+    date: "Jun 2022 - Current",
   },
   {
-    role: "Frontend Developer",
+    role: "Frontend Engineer",
     type: "Full Time",
-    company: "Permuta",
-    date: "Feb 2020 - Jul 2022"
+    company: "Flutterwave",
+    date: "May 2021 - Nov 2021"
 },
 {
-    role: "Frontend Developer",
+    role: "Frontend Engineer",
     type: "Full Time",
-    company: "Sobepal",
-    date: "Aug 2022 - Dec 2022"
+    company: "TangerineAfrica",
+    date: "Mar 2021 - Current"
 },
 {
-    role: "Frontend Developer",
+    role: "Frontend Engineer",
+    type: "Contract",
+    company: "Rizevo",
+    date: "Jul 2020 - Oct 2022"
+},
+{
+    role: "Frontend Engineer",
     type: "Full Time",
-    company: "MindCare",
-    date: "Dec 2022 - Current"
+    company: "Flex Me",
+    date: "Mar 2020 - Feb 2022"
 }
 ];

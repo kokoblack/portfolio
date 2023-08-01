@@ -7,8 +7,13 @@ export const TSContainer = styled.div`
   flex-direction: column;
   padding: 4%;
   box-sizing: border-box;
-  /* margin-top: 8%; */
+  margin-top: 10rem;
   width: 100%;
+
+  @media screen and (max-width: 599px) {
+    margin-top: 15rem;
+  }
+
 `;
 
 export const TSHeader = styled.h3`

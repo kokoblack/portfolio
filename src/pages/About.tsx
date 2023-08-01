@@ -32,14 +32,11 @@ const About = () => {
         >
           <AboutHeader>About Me</AboutHeader>
           <AboutText>
-            Front-End Developer with proven experience in helping companies to
-            create and maintain a better codebase for reusability. I love a lot
-            about the aesthetics of coding and at most the efficiency of a
-            codebase and more importantly the mobile-first approach. I am
-            committed to improving organization processes, procedures and
-            operational strategies. Passionate about learning and development
-            and eager to tackle more complex problems and continue to find ways
-            to maximize user efficiency.
+            Quality oriented professional with more than 3 years of experience
+            and proven knowledge in website design and front-end engineering
+            frameworks and technologies. Strong creative and analytical skills.
+            Team player with an eye for detail. Aiming to leverage my skills to
+            successfully fill the front-end engineering role at your company.
           </AboutText>
         </motion.div>
       </section>

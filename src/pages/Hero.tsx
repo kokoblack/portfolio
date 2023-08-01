@@ -6,7 +6,7 @@ import {
   HeroText,
   HeroTextSpan,
 } from "../styles/Hero";
-import profile from "../assets/prof.jpg";
+import profile from "../assets/photo.jpg";
 import Typewriter from "typewriter-effect";
 import { motion } from "framer-motion";
 import { useRef } from "react";
