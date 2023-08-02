@@ -8,7 +8,7 @@ export const HeroContainer = styled.div`
   padding: 0 4%;
   box-sizing: border-box;
   /* margin-top: 8%; */
-  height: 100dvh;
+  height: 100vh;
 
   @media screen and (max-width: 992px) {
     flex-direction: column;
