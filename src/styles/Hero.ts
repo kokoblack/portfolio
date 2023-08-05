@@ -25,6 +25,7 @@ export const HeroBasis = styled.div<{ basis: number }>`
 
 export const HeroText = styled.p`
   font-weight: 700;
+  margin: 0;
   font-size: clamp(1.8rem, 4vw, 3.5rem);
   color: ${({ theme }) => theme.secondary};
   text-align: left;
@@ -38,6 +39,16 @@ export const HeroTextSpan = styled.div`
   background: -webkit-linear-gradient(360deg, #13b0f5 -2.06%, #e70faa 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  font-weight: 700;
+  font-size: clamp(1.8rem, 4vw, 3.5rem);
+  text-align: left;
+  margin-top: .5rem;
+
+  @media screen and (max-width: 992px) {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
 `;
 
 export const HeroImg = styled.img`

@@ -1,18 +1,14 @@
 import {
   NavContainer,
-  NavIcon,
   NavIconContainer,
-  NavIconFlex,
   NavLink,
   NavLinkFlex,
   NavMenu,
   NavTheme,
   ToggleMenu,
-  ToggleNavIcon,
   ToggleNavTheme,
   Div,
 } from "../styles/NavBar";
-import { BsLinkedin, BsTwitter, BsGithub } from "react-icons/bs";
 import { HiOutlineMenuAlt3, HiOutlineSun, HiOutlineMoon } from "react-icons/hi";
 import { MdClose } from "react-icons/md";
 import { useContext, useState } from "react";
@@ -43,7 +39,6 @@ const NavBar = () => {
   const [light, toggleLight] = useState(true);
   const setActive = navContext.setActive;
   const active = navContext.active;
-  
 
   const onButtonClick = () => {
     fetch("Kareem.pdf").then((response) => {
