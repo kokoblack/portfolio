@@ -158,7 +158,7 @@ export const Div = styled.div<{ menu: boolean }>`
     ${({ menu }) => {
       if (menu) {
         return css`
-          backdrop-filter: blur(8px);
+          backdrop-filter: blur(24px);
         `;
       }
     }}
