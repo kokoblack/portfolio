@@ -31,7 +31,11 @@ export const ContactHeader = styled(HeroText)`
     font-size: clamp(1rem, 5vw, 1.5rem);
   }
 `;
-export const ContactHeaderSpan = styled(HeroTextSpan)``;
+export const ContactHeaderSpan = styled.span`
+  background: -webkit-linear-gradient(360deg, #13b0f5 -2.06%, #e70faa 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+`;
 export const ContactText = styled(ProjectCardDesc)`
   font-size: clamp(0.8rem, 2vw, 0.9rem);
   font-weight: 400;

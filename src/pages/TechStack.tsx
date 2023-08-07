@@ -12,7 +12,7 @@ import { useRef } from "react";
 
 const TechStack = () => {
   const myRef = useRef<HTMLDivElement>(null!);
-  updateActive(1, myRef);
+  updateActive(2, myRef);
 
   return (
     <motion.div

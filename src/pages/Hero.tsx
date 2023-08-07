@@ -6,7 +6,7 @@ import {
   HeroText,
   HeroTextSpan,
 } from "../styles/Hero";
-import profile from "../assets/ff.png";
+import profile from "../assets/photo.png";
 import Typewriter from "typewriter-effect";
 import { motion } from "framer-motion";
 import { useRef } from "react";
@@ -28,20 +28,20 @@ const Hero = () => {
           <HeroText>
             Hi &#128075;, <HeroBR />
             My name is <br />
-            <HeroTextSpan>
-              <Typewriter
-                options={{ loop: true }}
-                onInit={(typewriter) => {
-                  typewriter
-                    .typeString("Haruna Kareem.")
-                    .pauseFor(1000)
-                    .deleteAll()
-                    .typeString("I'm a Frontend Developer.")
-                    .start();
-                }}
-              />
-            </HeroTextSpan>
           </HeroText>
+          <HeroTextSpan>
+            <Typewriter
+              options={{ loop: true }}
+              onInit={(typewriter) => {
+                typewriter
+                  .typeString("Haruna Kareem.")
+                  .pauseFor(1000)
+                  .deleteAll()
+                  .typeString("I'm a Frontend Developer.")
+                  .start();
+              }}
+            />
+          </HeroTextSpan>
         </HeroBasis>
 
         <HeroBasis basis={40}>

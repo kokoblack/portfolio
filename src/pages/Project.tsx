@@ -22,7 +22,7 @@ import { useRef } from "react";
 
 const Project = () => {
   const myRef = useRef<HTMLDivElement>(null!);
-  updateActive(2, myRef);
+  updateActive(1, myRef);
 
   return (
     <ProjectContainer id="Projects" ref={myRef}>
