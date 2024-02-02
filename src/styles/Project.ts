@@ -38,6 +38,14 @@ background: #FFFFFF;
 box-shadow: 2px 2px 100px  ${({theme}) => theme.cardBS};
 border-radius: 20px;
 background-color: ${({theme}) => theme.cardBG};
+transition: all ease-in .5s;
+
+
+@media screen and (min-width: 992px) {
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
 `
 export const ProjectCardImg = styled.img`
 width: 100%;

@@ -24,17 +24,16 @@ const Hero = () => {
       viewport={{ once: true }}
     >
       <HeroContainer id="Home" ref={myRef}>
-        <HeroBasis basis={60}>
+        <HeroBasis basis={100}>
           <HeroText>
-            Hi &#128075;, <HeroBR />
-            My name is <br />
+            Hi &#128075;, <br />
           </HeroText>
           <HeroTextSpan>
             <Typewriter
               options={{ loop: true }}
               onInit={(typewriter) => {
                 typewriter
-                  .typeString("Haruna Kareem.")
+                  .typeString("I'm Haruna Abdul Kareem.")
                   .pauseFor(1000)
                   .deleteAll()
                   .typeString("I'm a Frontend Developer.")
@@ -44,9 +43,9 @@ const Hero = () => {
           </HeroTextSpan>
         </HeroBasis>
 
-        <HeroBasis basis={40}>
+        {/* <HeroBasis basis={40}>
           <HeroImg src={profile} />
-        </HeroBasis>
+        </HeroBasis> */}
       </HeroContainer>
     </motion.div>
   );

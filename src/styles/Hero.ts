@@ -28,7 +28,7 @@ export const HeroText = styled.p`
   margin: 0;
   font-size: clamp(1.8rem, 4vw, 3.5rem);
   color: ${({ theme }) => theme.secondary};
-  text-align: left;
+  text-align: center;
 
   @media screen and (max-width: 992px) {
     text-align: center;
@@ -41,7 +41,7 @@ export const HeroTextSpan = styled.div`
   -webkit-text-fill-color: transparent;
   font-weight: 700;
   font-size: clamp(1.8rem, 4vw, 3.5rem);
-  text-align: left;
+  text-align: center;
   margin-top: .5rem;
 
   @media screen and (max-width: 992px) {
