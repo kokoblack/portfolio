@@ -33,17 +33,7 @@ const TechStack = () => {
               transition={{ duration: 0.5, delay: icon.delay }}
               viewport={{ once: true }}
             >
-              <TSIcon color={icon.color}>
-                <motion.div
-                  whileHover={{
-                    scale: 1.2,
-                    rotate: -10,
-                    transition: { duration: 0.5 },
-                  }}
-                >
-                  {icon.icon}
-                </motion.div>
-              </TSIcon>
+              <TSIcon color={icon.color}>{icon.icon}</TSIcon>
             </motion.div>
           ))}
         </TSIconContainer>

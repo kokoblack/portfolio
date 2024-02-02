@@ -32,7 +32,7 @@ const About = () => {
         >
           <AboutHeader>About Me</AboutHeader>
           <AboutText>
-            Quality oriented professional with more than 3 years of experience
+            Quality oriented professional with more than 4 years of experience
             and proven knowledge in website design and front-end engineering
             frameworks and technologies. Strong creative and analytical skills.
             Team player with an eye for detail. Aiming to leverage my skills to

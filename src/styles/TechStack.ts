@@ -13,7 +13,6 @@ export const TSContainer = styled.div`
   @media screen and (max-width: 599px) {
     margin-top: 15rem;
   }
-
 `;
 
 export const TSHeader = styled.h3`
@@ -30,12 +29,15 @@ export const TSText = styled.p`
   margin: 1% 0;
 `;
 
-export const TSIcon = styled.div<{ color: string, w?: number }>`
+export const TSIcon = styled.div<{ color: string; w?: number }>`
   color: ${({ color }) => color};
   font-size: clamp(3rem, 5vw, 5rem);
+  transition: all ease-in 0.5s;
 
-  @media screen and (max-width: 992px) {
-    /* font-size: 5vw; */
+  @media screen and (min-width: 992px) {
+    &:hover {
+      transform: rotate(-10deg) scale(1.2);
+    }
   }
 `;
 

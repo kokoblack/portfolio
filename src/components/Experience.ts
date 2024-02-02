@@ -8,25 +8,19 @@ export const experience = [
   {
     role: "Frontend Engineer",
     type: "Full Time",
-    company: "Flutterwave",
-    date: "May 2021 - Nov 2021"
-},
-{
-    role: "Frontend Engineer",
-    type: "Full Time",
     company: "TangerineAfrica",
-    date: "Mar 2021 - Current"
-},
-{
+    date: "Mar 2020 - Jun 2022",
+  },
+  {
     role: "Frontend Engineer",
     type: "Contract",
     company: "Rizevo",
-    date: "Jul 2020 - Oct 2022"
-},
-{
+    date: "Dec 2019 - Feb 2020",
+  },
+  {
     role: "Frontend Engineer",
     type: "Full Time",
-    company: "Flex Me",
-    date: "Mar 2020 - Feb 2022"
-}
+    company: "HNG I8 (Zuri)",
+    date: "Aug 2019 - Dec 2019",
+  },
 ];
