@@ -15,9 +15,9 @@ import {
   ProjectHeader,
   ProjectText,
 } from "../styles/Project";
-import { project } from "../components/Project";
+import { project } from "../data/Project";
 import { motion } from "framer-motion";
-import { updateActive } from "../components/updateActive";
+import { updateActive } from "../utils/updateActive";
 import { useRef } from "react";
 
 const Project = () => {

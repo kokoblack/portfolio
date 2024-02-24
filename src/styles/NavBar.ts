@@ -123,11 +123,11 @@ export const ToggleMenu = styled.div`
   position: absolute;
   top: 80%;
   right: 5%;
-  background-color: rgba(0, 0, 0, .30);
 
   @media screen and (max-width: 479px) {
     top: 0;
     right: 0;
+    background-color: rgba(0, 0, 0, .30);
   }
 `;
 

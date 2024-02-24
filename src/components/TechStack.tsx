@@ -6,8 +6,8 @@ import {
   TSText,
 } from "../styles/TechStack";
 import { motion } from "framer-motion";
-import { icons } from "../components/Icons";
-import { updateActive } from "../components/updateActive";
+import { icons } from "../data/Icons";
+import { updateActive } from "../utils/updateActive";
 import { useRef } from "react";
 
 const TechStack = () => {

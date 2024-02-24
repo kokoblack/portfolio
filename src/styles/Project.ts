@@ -40,12 +40,11 @@ border-radius: 20px;
 background-color: ${({theme}) => theme.cardBG};
 transition: all ease-in .5s;
 
-
-@media screen and (min-width: 992px) {
-    &:hover {
+@media (hover: hover){
+  &:hover {
       transform: scale(1.05);
     }
-  }
+}
 `
 export const ProjectCardImg = styled.img`
 width: 100%;
