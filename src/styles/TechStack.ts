@@ -34,7 +34,7 @@ export const TSIcon = styled.div<{ color: string; w?: number }>`
   font-size: clamp(3rem, 5vw, 5rem);
   transition: all ease-in 0.5s;
 
-  @media screen and (min-width: 992px) {
+  @media (hover: hover){
     &:hover {
       transform: rotate(-10deg) scale(1.2);
     }

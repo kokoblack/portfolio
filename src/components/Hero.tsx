@@ -1,16 +1,13 @@
 import {
   HeroBasis,
-  HeroBR,
   HeroContainer,
-  HeroImg,
   HeroText,
   HeroTextSpan,
 } from "../styles/Hero";
-import profile from "../assets/photo.png";
 import Typewriter from "typewriter-effect";
 import { motion } from "framer-motion";
 import { useRef } from "react";
-import { updateActive } from "../components/updateActive";
+import { updateActive } from "../utils/updateActive";
 
 const Hero = () => {
   const myRef = useRef<HTMLDivElement>(null!);
@@ -42,10 +39,6 @@ const Hero = () => {
             />
           </HeroTextSpan>
         </HeroBasis>
-
-        {/* <HeroBasis basis={40}>
-          <HeroImg src={profile} />
-        </HeroBasis> */}
       </HeroContainer>
     </motion.div>
   );

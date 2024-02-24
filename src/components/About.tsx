@@ -1,5 +1,5 @@
 import { RiCalendar2Line, RiBuilding4Line } from "react-icons/ri";
-import { experience } from "../components/Experience";
+import { experience } from "../data/Experience";
 import {
   AboutContainer,
   AboutFlex,
@@ -15,7 +15,7 @@ import {
 import { Flex } from "../styles/Global";
 import { motion } from "framer-motion";
 import { useRef } from "react";
-import { updateActive } from "../components/updateActive";
+import { updateActive } from "../utils/updateActive";
 
 const About = () => {
   const myRef = useRef<HTMLDivElement>(null!);

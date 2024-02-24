@@ -1,5 +1,4 @@
-import React from "react";
-import Logo from "../components/Logo";
+import Logo from "./Logo";
 import {
   ContactContainer,
   ContactFLex,
@@ -10,21 +9,12 @@ import {
   ContactText,
 } from "../styles/Contact";
 import { Flex } from "../styles/Global";
-import { BsLinkedin, BsTwitter, BsGithub } from "react-icons/bs";
+import { contactIcons } from "../data/Icons";
 import { motion } from "framer-motion";
 import { useRef } from "react";
-import { updateActive } from "../components/updateActive";
+import { updateActive } from "../utils/updateActive";
 
 const Contact = () => {
-  const icons = [
-    { icon: <BsGithub />, link: "https://github.com/kokoblack" },
-    {
-      icon: <BsLinkedin />,
-      link: "https://www.linkedin.com/in/kokoblack/",
-    },
-    { icon: <BsTwitter />, link: "https://twitter.com/Kareem_d3v" },
-  ];
-
   const myRef = useRef<HTMLDivElement>(null!);
   updateActive(4, myRef);
 
@@ -50,9 +40,9 @@ const Contact = () => {
           <ContactText>benzimakareem26@gmail.com</ContactText>
 
           <Flex>
-            {icons.map((icons) => (
-              <ContactIcon href={icons.link} target="_blank" key={icons.link}>
-                {icons.icon}
+            {contactIcons.map((icon) => (
+              <ContactIcon href={icon.link} target="_blank" key={icon.link}>
+                {icon.icon}
               </ContactIcon>
             ))}
           </Flex>
